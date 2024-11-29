@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "coosanta_metal_pipe:item/metal_piple_-_copy"
+  }
+}

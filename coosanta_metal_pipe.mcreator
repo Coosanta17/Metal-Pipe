@@ -1,0 +1,50 @@
+{
+  "mod_elements": [
+    {
+      "name": "MetalPipe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metal_pipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/coosanta/metal_pipe/item/MetalPipeItem.java",
+          "src/main/resources/assets/coosanta_metal_pipe/models/item/metal_pipe.json"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:MetalPipe"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "item.coosanta_metal_pipe.metal_pipe": "Metal Pipe"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "coosanta_metal_pipe",
+    "modName": "Metal Pipes and Other Stuff etc etc",
+    "version": "1.0.0",
+    "author": "hhowe, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "modElementsPackage": "net.coosanta.metal_pipe"
+  },
+  "mcreatorVersion": 202400342716
+}
