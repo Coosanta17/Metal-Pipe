@@ -18,6 +18,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.coosanta.metal_pipe.init.CoosantaMetalPipeModTabs;
+import net.coosanta.metal_pipe.init.CoosantaMetalPipeModSounds;
 import net.coosanta.metal_pipe.init.CoosantaMetalPipeModItems;
 
 import java.util.function.Supplier;
@@ -39,6 +40,7 @@ public class CoosantaMetalPipeMod {
 		// End of user code block mod constructor
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		CoosantaMetalPipeModSounds.REGISTRY.register(bus);
 
 		CoosantaMetalPipeModItems.REGISTRY.register(bus);
 

@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.item.Item;
 
+import net.coosanta.metal_pipe.item.MetalPipeItem;
 import net.coosanta.metal_pipe.CoosantaMetalPipeMod;
 
 public class CoosantaMetalPipeModItems {

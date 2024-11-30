@@ -20,9 +20,9 @@
       }
     ],
     "efficiency": 4.0,
-    "attackSpeed": 1.0,
+    "attackSpeed": 2.0,
     "enchantability": 15,
-    "damageVsEntity": 4.0,
+    "damageVsEntity": 3.0,
     "usageCount": 500,
     "glowCondition": {
       "fixedValue": false
@@ -36,6 +36,15 @@
     "blockDropsTier": "IRON",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onCrafted": {
+      "name": "PlayTheSound"
+    },
+    "onEntityHitWith": {
+      "name": "PlayTheSound"
+    },
+    "onBlockDestroyedWithTool": {
+      "name": "PlayTheSound"
+    }
   }
 }

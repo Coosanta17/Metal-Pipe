@@ -24,49 +24,10 @@
           "src/main/resources/data/coosanta_metal_pipe/recipes/metal_pipe_crafting.json"
         ]
       }
-    },
-    {
-      "name": "PlayTheSound",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "play_the_sound",
-      "metadata": {
-        "files": [
-          "src/main/java/net/coosanta/metal_pipe/procedures/PlayTheSoundProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
     }
   ],
   "variable_elements": [],
-  "sound_elements": [
-    {
-      "name": "metal_pipe_falling",
-      "files": [
-        "metal-pipe-falling-sound-effect"
-      ],
-      "category": "player",
-      "subtitle": "Your ears dying."
-    }
-  ],
+  "sound_elements": [],
   "tag_elements": {
     "ITEMS:minecraft:swords": [
       "~CUSTOM:MetalPipe"
@@ -75,8 +36,7 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.coosanta_metal_pipe.metal_pipe": "Metal Pipe",
-      "subtitles.metal_pipe_falling": "Your ears dying."
+      "item.coosanta_metal_pipe.metal_pipe": "Metal Pipe"
     }
   },
   "foldersRoot": {
@@ -87,18 +47,15 @@
     "modid": "coosanta_metal_pipe",
     "modName": "Metal Pipes and Other Stuff etc etc",
     "version": "1.0.0",
-    "description": "adds Metal Pipes",
-    "author": "Coosanta",
-    "websiteURL": "https://github.com/Coosanta17/Metal-Pipe",
-    "license": "MIT License",
+    "author": "hhowe, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
     "serverSideOnly": false,
-    "modPicture": "metal_piple_-_copy_-_white",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.20.1",
-    "credits": "I couldn\u0027t be bothered to code this myself so I used MCreator - https://mcreator.net/",
     "modElementsPackage": "net.coosanta.metal_pipe"
   },
   "mcreatorVersion": 202400342716

@@ -1,0 +1,11 @@
+{
+  "metal_pipe_falling": {
+    "subtitle": "subtitles.metal_pipe_falling",
+    "sounds": [
+      {
+        "name": "coosanta_metal_pipe:metal-pipe-falling-sound-effect",
+        "stream": false
+      }
+    ]
+  }
+}
