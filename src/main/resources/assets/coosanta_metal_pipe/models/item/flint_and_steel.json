@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "coosanta_metal_pipe:item/music_disc_steel"
+  }
+}

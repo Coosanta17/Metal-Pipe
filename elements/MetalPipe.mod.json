@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 89,
   "_type": "tool",
   "definition": {
     "toolType": "Sword",
@@ -8,16 +8,16 @@
     "texture": "metal_piple_-_copy",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Metal Pipe",
+    "rarity": "COMMON",
     "specialInformation": {
       "fixedValue": [
         "Bonk!"
       ]
     },
     "creativeTabs": [
-      {
-        "value": "TOOLS"
-      }
+      "TOOLS"
     ],
     "efficiency": 4.0,
     "attackSpeed": 2.0,
@@ -28,23 +28,18 @@
       "fixedValue": false
     },
     "repairItems": [
-      {
-        "value": "Items.IRON_INGOT"
-      }
+      "Items.IRON_INGOT"
     ],
     "immuneToFire": false,
     "blockDropsTier": "IRON",
     "blocksAffected": [],
+    "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onCrafted": {
-      "name": "PlayTheSound"
-    },
-    "onEntityHitWith": {
-      "name": "PlayTheSound"
-    },
-    "onBlockDestroyedWithTool": {
-      "name": "PlayTheSound"
-    }
+    "onCrafted": "PlayTheSound",
+    "onEntityHitWith": "PlayTheSound",
+    "onBlockDestroyedWithTool": "PlayTheSound",
+    "onDroppedByPlayer": "PlayTheSound",
+    "onItemEntityDestroyed": "PlayTheSound"
   }
 }

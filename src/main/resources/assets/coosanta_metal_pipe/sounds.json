@@ -7,5 +7,14 @@
         "stream": false
       }
     ]
+  },
+  "flint_and_steel": {
+    "subtitle": "subtitles.flint_and_steel",
+    "sounds": [
+      {
+        "name": "coosanta_metal_pipe:flint_and_steel",
+        "stream": true
+      }
+    ]
   }
 }

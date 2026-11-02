@@ -1,17 +1,19 @@
-
 package net.coosanta.metal_pipe.item;
 
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.tags.TagKey;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
@@ -20,32 +22,40 @@ import net.coosanta.metal_pipe.procedures.PlayTheSoundProcedure;
 import java.util.List;
 
 public class MetalPipeItem extends SwordItem {
+	private static final Tier TOOL_TIER = new Tier() {
+		@Override
+		public int getUses() {
+			return 500;
+		}
+
+		@Override
+		public float getSpeed() {
+			return 4f;
+		}
+
+		@Override
+		public float getAttackDamageBonus() {
+			return 0;
+		}
+
+		@Override
+		public TagKey<Block> getIncorrectBlocksForDrops() {
+			return BlockTags.INCORRECT_FOR_IRON_TOOL;
+		}
+
+		@Override
+		public int getEnchantmentValue() {
+			return 15;
+		}
+
+		@Override
+		public Ingredient getRepairIngredient() {
+			return Ingredient.of(new ItemStack(Items.IRON_INGOT));
+		}
+	};
+
 	public MetalPipeItem() {
-		super(new Tier() {
-			public int getUses() {
-				return 500;
-			}
-
-			public float getSpeed() {
-				return 4f;
-			}
-
-			public float getAttackDamageBonus() {
-				return -1f;
-			}
-
-			public int getLevel() {
-				return 2;
-			}
-
-			public int getEnchantmentValue() {
-				return 15;
-			}
-
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(Items.IRON_INGOT));
-			}
-		}, 3, -2f, new Item.Properties());
+		super(TOOL_TIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOL_TIER, 2f, -2f)));
 	}
 
 	@Override
@@ -63,14 +73,27 @@ public class MetalPipeItem extends SwordItem {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Bonk!"));
+	@OnlyIn(Dist.CLIENT)
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, list, flag);
+		list.add(Component.translatable("item.coosanta_metal_pipe.metal_pipe.description_0"));
 	}
 
 	@Override
 	public void onCraftedBy(ItemStack itemstack, Level world, Player entity) {
 		super.onCraftedBy(itemstack, world, entity);
 		PlayTheSoundProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ());
+	}
+
+	@Override
+	public boolean onDroppedByPlayer(ItemStack itemstack, Player entity) {
+		PlayTheSoundProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ());
+		return true;
+	}
+
+	@Override
+	public void onDestroyed(ItemEntity entity, DamageSource damagesource) {
+		super.onDestroyed(entity, damagesource);
+		PlayTheSoundProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ());
 	}
 }

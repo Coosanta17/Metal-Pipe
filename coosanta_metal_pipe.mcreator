@@ -21,7 +21,8 @@
       "registry_name": "metal_pipe_crafting",
       "metadata": {
         "files": [
-          "src/main/resources/data/coosanta_metal_pipe/recipes/metal_pipe_crafting.json"
+          "src/main/resources/data/coosanta_metal_pipe/recipe/metal_pipe_crafting.json",
+          "src/main/resources/data/coosanta_metal_pipe/advancement/recipes/metal_pipe_crafting.json"
         ]
       }
     },
@@ -54,6 +55,20 @@
           }
         ]
       }
+    },
+    {
+      "name": "FlintAndSteel",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flint_and_steel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/coosanta/metal_pipe/item/FlintAndSteelItem.java",
+          "src/main/resources/data/coosanta_metal_pipe/jukebox_song/flint_and_steel.json",
+          "src/main/resources/assets/coosanta_metal_pipe/models/item/flint_and_steel.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -65,19 +80,45 @@
       ],
       "category": "player",
       "subtitle": "Your ears dying."
+    },
+    {
+      "name": "flint_and_steel",
+      "files": [
+        "flint_and_steel"
+      ],
+      "category": "record",
+      "subtitle": "Steve Strokes His Penis"
     }
   ],
   "tag_elements": {
+    "ITEMS:minecraft:music_discs": [
+      "~FlintAndSteel@CUSTOM:FlintAndSteel"
+    ],
     "ITEMS:minecraft:swords": [
-      "~CUSTOM:MetalPipe"
+      "~MetalPipe@CUSTOM:MetalPipe"
     ]
   },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
       "item.coosanta_metal_pipe.metal_pipe": "Metal Pipe",
-      "subtitles.metal_pipe_falling": "Your ears dying."
+      "subtitles.metal_pipe_falling": "Your ears dying.",
+      "item.coosanta_metal_pipe.metal_pipe.description_0": "Bonk!",
+      "subtitles.flint_and_steel": "Steve Strokes His Penis",
+      "item.coosanta_metal_pipe.flint_and_steel": "Music Disc",
+      "item.coosanta_metal_pipe.flint_and_steel.desc": "EpochGD - FLINT AND STEEL"
     }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/coosanta/metal_pipe/init/CoosantaMetalPipeModItems.java",
+      "src/main/resources/assets/coosanta_metal_pipe/sounds.json",
+      "src/main/java/net/coosanta/metal_pipe/init/CoosantaMetalPipeModSounds.java",
+      "src/main/java/net/coosanta/metal_pipe/init/CoosantaMetalPipeModTabs.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/coosanta/metal_pipe/CoosantaMetalPipeMod.java"
+    ]
   },
   "foldersRoot": {
     "name": "~",
@@ -86,8 +127,8 @@
   "workspaceSettings": {
     "modid": "coosanta_metal_pipe",
     "modName": "Metal Pipes and Other Stuff etc etc",
-    "version": "1.0.0",
-    "description": "adds Metal Pipes",
+    "version": "1.1",
+    "description": "adds Metal Pipes and more",
     "author": "Coosanta",
     "websiteURL": "https://github.com/Coosanta17/Metal-Pipe",
     "license": "MIT License",
@@ -97,9 +138,9 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.20.1",
+    "currentGenerator": "neoforge-1.21.1",
     "credits": "I couldn\u0027t be bothered to code this myself so I used MCreator - https://mcreator.net/",
     "modElementsPackage": "net.coosanta.metal_pipe"
   },
-  "mcreatorVersion": 202400342716
+  "mcreatorVersion": 202600233518
 }

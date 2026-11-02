@@ -1,4 +1,8 @@
 {
   "item.coosanta_metal_pipe.metal_pipe": "Metal Pipe",
-  "subtitles.metal_pipe_falling": "Your ears dying."
+  "subtitles.metal_pipe_falling": "Your ears dying.",
+  "item.coosanta_metal_pipe.metal_pipe.description_0": "Bonk!",
+  "subtitles.flint_and_steel": "Steve Strokes His Penis",
+  "item.coosanta_metal_pipe.flint_and_steel": "Music Disc",
+  "item.coosanta_metal_pipe.flint_and_steel.desc": "EpochGD - FLINT AND STEEL"
 }

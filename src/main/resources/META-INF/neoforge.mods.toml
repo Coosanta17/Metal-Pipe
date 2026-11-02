@@ -1,24 +1,35 @@
 modLoader="javafml"
-loaderVersion="[47,)"
+loaderVersion="[4,)"
 license="MIT License"
 
 [[mods]]
 modId="coosanta_metal_pipe"
-version="1.0.0"
+version="1.1"
 displayName="Metal Pipes and Other Stuff etc etc"
 displayURL="https://github.com/Coosanta17/Metal-Pipe"
 logoFile="logo.png"
 credits="I couldn't be bothered to code this myself so I used MCreator - https://mcreator.net/"
 authors="Coosanta"
-description="adds Metal Pipes"
+description="adds Metal Pipes and more"
 
 # Start of user code block mod configuration
 # End of user code block mod configuration
 
+
+# Start of user code block custom mixins
+# End of user code block custom mixins
+
+[[dependencies.coosanta_metal_pipe]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.232,)"
+    ordering="AFTER"
+    side="BOTH"
+
 [[dependencies.coosanta_metal_pipe]]
     modId="minecraft"
-    mandatory=true
-    versionRange="[1.20.1]"
+    type="required"
+    versionRange="[1.21.1]"
     ordering="AFTER"
     side="BOTH"
 
